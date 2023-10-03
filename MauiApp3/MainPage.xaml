@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ListView x:Name="FruitListView" HasUnevenRows="true" SelectedItem="FruitListView_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Margin="20" Padding="10">
+                        <Image Source="{Binding Image}"
+                               HeightRequest="60"
+                               WidthRequest="60"
+                               Margin="10"/>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" FontSize="24"/>
+                            <Label Text="{Binding Description}" FontSize="18"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
